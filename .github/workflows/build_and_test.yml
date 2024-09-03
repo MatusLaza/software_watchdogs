@@ -20,7 +20,7 @@ jobs:
     - uses: ros-tooling/setup-ros@0.7.9
       with:
         required-ros-distributions: ${{ matrix.ros_distribution }}
-    - uses : ros-tooling/action-ros-ci@0.3.14
+    - uses : MatusLaza/action-ros-ci
       with:
         package-name: "sw_watchdog"
         target-ros2-distro: ${{ matrix.ros_distribution }}
