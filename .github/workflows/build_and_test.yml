@@ -27,12 +27,14 @@ jobs:
         vcs-repo-file-url: ""
         colcon-defaults: |
           {
-            "build": {
-              "mixin": ["coverage-gcc"]
-              "cmake-args": [
-                "-DCMAKE_CXX_FLAGS=--coverage"
-              ]
-            }
+              "build": {
+                  "mixin": [
+                      "coverage-gcc"
+                  ],
+                  "cmake-args": [
+                      "-DCMAKE_CXX_FLAGS='--coverage'"
+                  ]
+              }
           }
         colcon-mixin-repository: https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
     - uses: codecov/codecov-action@v1
