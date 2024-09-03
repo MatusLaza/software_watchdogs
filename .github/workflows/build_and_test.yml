@@ -30,7 +30,7 @@ jobs:
             "build": {
               "mixin": ["coverage-gcc"]
               "cmake-args": [
-                "-DCMAKE_CXX_FLAGS='--coverage'"
+                "-DCMAKE_CXX_FLAGS=--coverage"
               ]
             }
           }
