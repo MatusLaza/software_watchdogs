@@ -35,6 +35,11 @@ jobs:
               }
           }
         colcon-mixin-repository: https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
+    - uses: actions/upload-artifact@v1
+      with:
+        name: coverage-report
+        path: ${{ steps.action_ros_ci_step.outputs.ros-workspace-directory-name }}/coverage_report
+      if: always()
     - uses: codecov/codecov-action@v1
       with:
         file: ros_ws/lcov/total_coverage.info
